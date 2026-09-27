@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cara.example/spec/aepg/v0.2/schemas/authorization-receipt.schema.json",
+  "title": "AuthorizationReceipt",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "cara.authorization-receipt/v0.2"
+    },
+    "receipt_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "decision_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "activity_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "pep_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "canonical_action_hash": {
+      "$ref": "common.schema.json#/$defs/hash"
+    },
+    "issued_at": {
+      "$ref": "common.schema.json#/$defs/timestamp"
+    },
+    "revocation_snapshot_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "signature": {
+      "$ref": "common.schema.json#/$defs/signature"
+    }
+  },
+  "required": [
+    "schema",
+    "receipt_id",
+    "decision_id",
+    "activity_id",
+    "pep_id",
+    "canonical_action_hash",
+    "issued_at",
+    "revocation_snapshot_id",
+    "signature"
+  ],
+  "additionalProperties": false
+}

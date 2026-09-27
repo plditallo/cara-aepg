@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cara.example/spec/aepg/v0.3/schemas/actuator.schema.json",
+  "title": "Actuator",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "cara.actuator/v0.3"
+    },
+    "actuator_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "actuator_type": {
+      "type": "string"
+    },
+    "trust_domain": {
+      "type": "string"
+    },
+    "pag_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "safe_state": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "actuator_id",
+    "actuator_type",
+    "trust_domain",
+    "pag_id",
+    "safe_state"
+  ],
+  "additionalProperties": false
+}

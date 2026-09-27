@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cara.example/spec/aepg/v0.2/schemas/agent.schema.json",
+  "title": "Agent",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "cara.agent/v0.2"
+    },
+    "agent_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "workload_identity": {
+      "type": "string"
+    },
+    "model_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "runtime_ref": {
+      "type": "string"
+    },
+    "attestation_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "active",
+        "restricted",
+        "isolated",
+        "frozen",
+        "terminated"
+      ]
+    },
+    "created_at": {
+      "$ref": "common.schema.json#/$defs/timestamp"
+    }
+  },
+  "required": [
+    "schema",
+    "agent_id",
+    "workload_identity",
+    "runtime_ref",
+    "status",
+    "created_at"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cara.example/spec/aepg/v0.3/schemas/revocation.schema.json",
+  "title": "Revocation",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "cara.revocation/v0.3"
+    },
+    "revocation_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "issuer": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "target_type": {
+      "enum": [
+        "grant",
+        "root",
+        "subject",
+        "credential",
+        "session",
+        "issuer",
+        "key",
+        "policy",
+        "attestation_authority",
+        "trust_relationship"
+      ]
+    },
+    "target_id": {
+      "type": "string"
+    },
+    "operation": {
+      "enum": [
+        "REVOKE",
+        "SUSPEND",
+        "RESUME"
+      ]
+    },
+    "reason_code": {
+      "type": "string"
+    },
+    "effective_at": {
+      "$ref": "common.schema.json#/$defs/timestamp"
+    },
+    "new_epoch": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "dependency_classes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "grant",
+          "root",
+          "issuer",
+          "key",
+          "policy",
+          "attestation_authority",
+          "trust_relationship"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "signature": {
+      "$ref": "common.schema.json#/$defs/signature"
+    }
+  },
+  "required": [
+    "schema",
+    "revocation_id",
+    "issuer",
+    "target_type",
+    "target_id",
+    "operation",
+    "reason_code",
+    "effective_at",
+    "new_epoch",
+    "dependency_classes",
+    "signature"
+  ],
+  "additionalProperties": false
+}

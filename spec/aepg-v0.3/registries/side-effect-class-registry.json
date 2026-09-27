@@ -1,0 +1,14 @@
+{
+  "registry": "AEPG Side-Effect Class Registry",
+  "version": "0.3",
+  "order": [
+    "read_only",
+    "ephemeral",
+    "persistent",
+    "external",
+    "privileged",
+    "physical",
+    "irreversible"
+  ],
+  "rule": "Child class MUST NOT exceed parent class; unknown class is UNRESOLVED and DENY."
+}

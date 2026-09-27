@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cara.example/spec/aepg/v0.2/schemas/execution-event.schema.json",
+  "title": "ExecutionEvent",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "cara.execution-event/v0.2"
+    },
+    "event_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "event_type": {
+      "type": "string"
+    },
+    "tier": {
+      "$ref": "common.schema.json#/$defs/tier"
+    },
+    "activity_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "actor_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "parent_event_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      },
+      "uniqueItems": true
+    },
+    "authority_basis_id": {
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "decision_id": {
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "resource_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      },
+      "uniqueItems": true
+    },
+    "artifact_input_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      },
+      "uniqueItems": true
+    },
+    "artifact_output_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      },
+      "uniqueItems": true
+    },
+    "observed_at": {
+      "$ref": "common.schema.json#/$defs/timestamp"
+    },
+    "observer_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "result": {
+      "enum": [
+        "success",
+        "failure",
+        "denied",
+        "partial",
+        "unknown"
+      ]
+    },
+    "evidence_hash": {
+      "$ref": "common.schema.json#/$defs/hash"
+    },
+    "signature": {
+      "$ref": "common.schema.json#/$defs/signature"
+    }
+  },
+  "required": [
+    "schema",
+    "event_id",
+    "event_type",
+    "tier",
+    "activity_id",
+    "actor_id",
+    "parent_event_ids",
+    "authority_basis_id",
+    "decision_id",
+    "resource_ids",
+    "artifact_input_ids",
+    "artifact_output_ids",
+    "observed_at",
+    "observer_id",
+    "result",
+    "evidence_hash",
+    "signature"
+  ],
+  "additionalProperties": false
+}

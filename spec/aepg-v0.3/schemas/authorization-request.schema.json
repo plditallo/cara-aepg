@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cara.example/spec/aepg/v0.3/schemas/authorization-request.schema.json",
+  "title": "AuthorizationRequest",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "cara.authorization-request/v0.3"
+    },
+    "request_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "activity_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "subject": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "candidate_grant_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      },
+      "uniqueItems": true
+    },
+    "resource_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "canonical_action_hash": {
+      "$ref": "common.schema.json#/$defs/hash"
+    },
+    "state_hash": {
+      "$ref": "common.schema.json#/$defs/hash"
+    },
+    "composition_state_id": {
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "attestation_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "policy_information_source_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      },
+      "uniqueItems": true
+    },
+    "requested_at": {
+      "$ref": "common.schema.json#/$defs/timestamp"
+    },
+    "nonce": {
+      "type": "string",
+      "minLength": 8
+    },
+    "signature": {
+      "$ref": "common.schema.json#/$defs/signature"
+    }
+  },
+  "required": [
+    "schema",
+    "request_id",
+    "activity_id",
+    "subject",
+    "candidate_grant_ids",
+    "resource_id",
+    "canonical_action_hash",
+    "state_hash",
+    "composition_state_id",
+    "attestation_refs",
+    "policy_information_source_ids",
+    "requested_at",
+    "nonce",
+    "signature"
+  ],
+  "additionalProperties": false
+}

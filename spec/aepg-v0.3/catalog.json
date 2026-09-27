@@ -1,0 +1,132 @@
+{
+  "catalog": "AEPG Machine-Readable Schema Catalog",
+  "version": "0.3",
+  "json_schema_draft": "2020-12",
+  "schemas": [
+    {
+      "name": "activity",
+      "file": "schemas/activity.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/activity.schema.json"
+    },
+    {
+      "name": "actuator",
+      "file": "schemas/actuator.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/actuator.schema.json"
+    },
+    {
+      "name": "agent",
+      "file": "schemas/agent.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/agent.schema.json"
+    },
+    {
+      "name": "artifact",
+      "file": "schemas/artifact.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/artifact.schema.json"
+    },
+    {
+      "name": "authority-basis",
+      "file": "schemas/authority-basis.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/authority-basis.schema.json"
+    },
+    {
+      "name": "authority-grant",
+      "file": "schemas/authority-grant.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/authority-grant.schema.json"
+    },
+    {
+      "name": "authorization-decision",
+      "file": "schemas/authorization-decision.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/authorization-decision.schema.json"
+    },
+    {
+      "name": "authorization-receipt",
+      "file": "schemas/authorization-receipt.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/authorization-receipt.schema.json"
+    },
+    {
+      "name": "authorization-request",
+      "file": "schemas/authorization-request.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/authorization-request.schema.json"
+    },
+    {
+      "name": "common",
+      "file": "schemas/common.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/common.schema.json"
+    },
+    {
+      "name": "composition-state",
+      "file": "schemas/composition-state.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/composition-state.schema.json"
+    },
+    {
+      "name": "constraint-proof",
+      "file": "schemas/constraint-proof.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/constraint-proof.schema.json"
+    },
+    {
+      "name": "edge",
+      "file": "schemas/edge.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/edge.schema.json"
+    },
+    {
+      "name": "evaluation-context",
+      "file": "schemas/evaluation-context.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/evaluation-context.schema.json"
+    },
+    {
+      "name": "execution-acknowledgment",
+      "file": "schemas/execution-acknowledgment.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/execution-acknowledgment.schema.json"
+    },
+    {
+      "name": "execution-event",
+      "file": "schemas/execution-event.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/execution-event.schema.json"
+    },
+    {
+      "name": "policy-information-source",
+      "file": "schemas/policy-information-source.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/policy-information-source.schema.json"
+    },
+    {
+      "name": "policy",
+      "file": "schemas/policy.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/policy.schema.json"
+    },
+    {
+      "name": "principal",
+      "file": "schemas/principal.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/principal.schema.json"
+    },
+    {
+      "name": "recovery",
+      "file": "schemas/recovery.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/recovery.schema.json"
+    },
+    {
+      "name": "resource",
+      "file": "schemas/resource.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/resource.schema.json"
+    },
+    {
+      "name": "revocation",
+      "file": "schemas/revocation.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/revocation.schema.json"
+    },
+    {
+      "name": "risk-signal",
+      "file": "schemas/risk-signal.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/risk-signal.schema.json"
+    },
+    {
+      "name": "root-authority",
+      "file": "schemas/root-authority.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/root-authority.schema.json"
+    },
+    {
+      "name": "tool",
+      "file": "schemas/tool.schema.json",
+      "id": "https://cara.example/spec/aepg/v0.3/schemas/tool.schema.json"
+    }
+  ]
+}

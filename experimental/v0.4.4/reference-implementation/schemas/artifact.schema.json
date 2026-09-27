@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cara.example/spec/aepg/v0.2/schemas/artifact.schema.json",
+  "title": "Artifact",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "cara.artifact/v0.2"
+    },
+    "artifact_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "artifact_type": {
+      "type": "string"
+    },
+    "content_hash": {
+      "$ref": "common.schema.json#/$defs/hash"
+    },
+    "classification": {
+      "type": "string"
+    },
+    "created_by_activity_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "provenance_root_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      },
+      "uniqueItems": true
+    },
+    "created_at": {
+      "$ref": "common.schema.json#/$defs/timestamp"
+    }
+  },
+  "required": [
+    "schema",
+    "artifact_id",
+    "artifact_type",
+    "content_hash",
+    "classification",
+    "created_by_activity_id",
+    "provenance_root_ids",
+    "created_at"
+  ],
+  "additionalProperties": false
+}

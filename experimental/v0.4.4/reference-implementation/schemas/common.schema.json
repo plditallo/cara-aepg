@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cara.example/spec/aepg/v0.2/schemas/common.schema.json",
+  "title": "AEPG Common Types v0.2",
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^cara:[a-z0-9-]+:[A-Za-z0-9._-]+:.+$"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "hash": {
+      "type": "string",
+      "pattern": "^(sha256|sha384|sha512):[A-Fa-f0-9]+$"
+    },
+    "signature": {
+      "type": "object",
+      "required": [
+        "key_id",
+        "algorithm",
+        "value"
+      ],
+      "properties": {
+        "key_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "algorithm": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "tier": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "authorityMode": {
+      "enum": [
+        "SINGLE",
+        "ANY",
+        "ALL",
+        "THRESHOLD"
+      ]
+    },
+    "constraintRelation": {
+      "enum": [
+        "STRICTLY_NARROWER",
+        "EQUIVALENT",
+        "INCOMPARABLE",
+        "BROADER",
+        "UNRESOLVED"
+      ]
+    },
+    "decision": {
+      "enum": [
+        "ALLOW",
+        "DENY",
+        "REQUIRE_APPROVAL",
+        "RESTRICT"
+      ]
+    },
+    "status": {
+      "enum": [
+        "active",
+        "suspended",
+        "revoked"
+      ]
+    },
+    "idArray": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/id"
+      },
+      "uniqueItems": true
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "registry": "AEPG Constraint Registry",
+  "version": "0.3",
+  "comparator_ownership": "PARENT_OR_REGISTRY",
+  "child_override": "PROHIBITED",
+  "default_new_constraint_rule": "DENY_UNLESS_REGISTERED_AS_INTRINSICALLY_NARROWING",
+  "entries": [
+    {
+      "type": "daily_budget",
+      "comparator_id": "numeric-max/v1",
+      "comparator_version": "1"
+    },
+    {
+      "type": "rate_limit",
+      "comparator_id": "numeric-max/v1",
+      "comparator_version": "1"
+    },
+    {
+      "type": "allowed_regions",
+      "comparator_id": "set-subset/v1",
+      "comparator_version": "1"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cara.example/spec/aepg/v0.3/schemas/resource.schema.json",
+  "title": "Resource",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "cara.resource/v0.3"
+    },
+    "resource_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "resource_type": {
+      "type": "string"
+    },
+    "trust_domain": {
+      "type": "string"
+    },
+    "classification": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "resource_id",
+    "resource_type",
+    "trust_domain",
+    "classification",
+    "version"
+  ],
+  "additionalProperties": false
+}

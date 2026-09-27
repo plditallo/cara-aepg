@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cara.example/spec/aepg/v0.3/schemas/authorization-decision.schema.json",
+  "title": "AuthorizationDecision",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "cara.authorization-decision/v0.3"
+    },
+    "decision_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "request_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "activity_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "subject": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "pep_audience": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "authority_basis_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "decision": {
+      "$ref": "common.schema.json#/$defs/decision"
+    },
+    "canonical_action_hash": {
+      "$ref": "common.schema.json#/$defs/hash"
+    },
+    "request_hash": {
+      "$ref": "common.schema.json#/$defs/hash"
+    },
+    "resource_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "state_hash": {
+      "$ref": "common.schema.json#/$defs/hash"
+    },
+    "policy_version": {
+      "type": "string"
+    },
+    "revocation_snapshot_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "not_before": {
+      "$ref": "common.schema.json#/$defs/timestamp"
+    },
+    "expires_at": {
+      "$ref": "common.schema.json#/$defs/timestamp"
+    },
+    "nonce": {
+      "type": "string",
+      "minLength": 8
+    },
+    "one_time": {
+      "type": "boolean"
+    },
+    "reason_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "signature": {
+      "$ref": "common.schema.json#/$defs/signature"
+    }
+  },
+  "required": [
+    "schema",
+    "decision_id",
+    "request_id",
+    "activity_id",
+    "subject",
+    "pep_audience",
+    "authority_basis_id",
+    "decision",
+    "canonical_action_hash",
+    "request_hash",
+    "resource_id",
+    "state_hash",
+    "policy_version",
+    "revocation_snapshot_id",
+    "not_before",
+    "expires_at",
+    "nonce",
+    "one_time",
+    "reason_codes",
+    "signature"
+  ],
+  "additionalProperties": false
+}

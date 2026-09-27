@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cara.example/spec/aepg/v0.3/schemas/composition-state.schema.json",
+  "title": "CompositionState",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "cara.composition-state/v0.3"
+    },
+    "composition_state_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "subject_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "window_start": {
+      "$ref": "common.schema.json#/$defs/timestamp"
+    },
+    "window_end": {
+      "$ref": "common.schema.json#/$defs/timestamp"
+    },
+    "aggregates": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "number",
+          "integer",
+          "string",
+          "boolean",
+          "null"
+        ]
+      }
+    },
+    "state_hash": {
+      "$ref": "common.schema.json#/$defs/hash"
+    },
+    "updated_at": {
+      "$ref": "common.schema.json#/$defs/timestamp"
+    },
+    "signature": {
+      "$ref": "common.schema.json#/$defs/signature"
+    }
+  },
+  "required": [
+    "schema",
+    "composition_state_id",
+    "subject_id",
+    "window_start",
+    "window_end",
+    "aggregates",
+    "state_hash",
+    "updated_at",
+    "signature"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aepg-reference"
+version = "0.4.3.dev0"
+description = "Reference semantic validator and PDP core for AEPG v0.2"
+requires-python = ">=3.10"
+dependencies = ["jsonschema>=4.18", "referencing>=0.30", "cryptography>=42"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]

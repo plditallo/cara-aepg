@@ -1,0 +1,20 @@
+{
+  "reference_implementation": "120 passed",
+  "pag_experiment": "87 passed",
+  "total": "207 passed",
+  "dd6_sweep": {
+    "aggregate_configurations": 324,
+    "seeds_per_configuration": 20,
+    "network_configurations_per_protocol_contact": 54,
+    "contact_durations_s": [
+      0.1,
+      0.3,
+      1.0
+    ],
+    "protocols": [
+      "v0.4.3_periodic",
+      "dd6_seq_gate"
+    ]
+  },
+  "scope_note": "Simulation only. DD-6 shrinks but does not eliminate stale-authority effect completion."
+}

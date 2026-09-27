@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cara.example/spec/aepg/v0.3/schemas/authority-grant.schema.json",
+  "title": "AuthorityGrant",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "cara.authority-grant/v0.3"
+    },
+    "grant_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "issuer": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "subject": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "root_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "parent_grant_id": {
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "audience": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "resources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "actions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "value",
+          "comparator_id",
+          "comparator_version"
+        ],
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "value": {},
+          "comparator_id": {
+            "type": "string"
+          },
+          "comparator_version": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "side_effect_class": {
+      "type": "string"
+    },
+    "delegation": {
+      "type": "object",
+      "required": [
+        "allowed",
+        "remaining_depth"
+      ],
+      "properties": {
+        "allowed": {
+          "type": "boolean"
+        },
+        "remaining_depth": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_children": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "validity": {
+      "type": "object",
+      "required": [
+        "not_before",
+        "expires_at"
+      ],
+      "properties": {
+        "not_before": {
+          "$ref": "common.schema.json#/$defs/timestamp"
+        },
+        "expires_at": {
+          "$ref": "common.schema.json#/$defs/timestamp"
+        }
+      },
+      "additionalProperties": false
+    },
+    "revocation_epoch": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "issued_at": {
+      "$ref": "common.schema.json#/$defs/timestamp"
+    },
+    "signature": {
+      "$ref": "common.schema.json#/$defs/signature"
+    },
+    "policy_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "security_dependencies": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "id"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "key",
+              "policy",
+              "attestation_authority",
+              "trust_relationship"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "grant_id",
+    "issuer",
+    "subject",
+    "root_id",
+    "parent_grant_id",
+    "audience",
+    "resources",
+    "actions",
+    "constraints",
+    "side_effect_class",
+    "delegation",
+    "validity",
+    "revocation_epoch",
+    "issued_at",
+    "signature",
+    "policy_version",
+    "security_dependencies"
+  ],
+  "additionalProperties": false
+}

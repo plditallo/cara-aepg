@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cara.example/spec/aepg/v0.3/schemas/evaluation-context.schema.json",
+  "title": "EvaluationContext",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "cara.evaluation-context/v0.3"
+    },
+    "evaluated_at": {
+      "$ref": "common.schema.json#/$defs/timestamp"
+    },
+    "pep_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "canonical_action": {
+      "type": "object"
+    },
+    "canonical_action_hash": {
+      "$ref": "common.schema.json#/$defs/hash"
+    },
+    "resource_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "authorization_deadline_ms": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "required": [
+    "schema",
+    "evaluated_at",
+    "pep_id",
+    "canonical_action",
+    "canonical_action_hash",
+    "resource_id",
+    "authorization_deadline_ms"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cara.example/spec/aepg/v0.2/schemas/principal.schema.json",
+  "title": "Principal",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "cara.principal/v0.2"
+    },
+    "principal_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "principal_type": {
+      "enum": [
+        "human",
+        "service",
+        "organization",
+        "system"
+      ]
+    },
+    "identity_provider": {
+      "type": "string"
+    },
+    "subject_identifier": {
+      "type": "string"
+    },
+    "trust_domain": {
+      "type": "string"
+    },
+    "status": {
+      "$ref": "common.schema.json#/$defs/status"
+    }
+  },
+  "required": [
+    "schema",
+    "principal_id",
+    "principal_type",
+    "identity_provider",
+    "subject_identifier",
+    "trust_domain",
+    "status"
+  ],
+  "additionalProperties": false
+}

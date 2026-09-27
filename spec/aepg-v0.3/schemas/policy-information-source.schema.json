@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cara.example/spec/aepg/v0.3/schemas/policy-information-source.schema.json",
+  "title": "PolicyInformationSource",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "cara.policy-information-source/v0.3"
+    },
+    "source_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "data_class": {
+      "enum": [
+        "identity",
+        "attestation",
+        "risk",
+        "state",
+        "revocation",
+        "asset",
+        "environment"
+      ]
+    },
+    "freshness_requirement_seconds": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "integrity_level": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    },
+    "availability_class": {
+      "enum": [
+        "best_effort",
+        "important",
+        "critical"
+      ]
+    },
+    "trust_domain": {
+      "type": "string"
+    },
+    "signature": {
+      "$ref": "common.schema.json#/$defs/signature"
+    }
+  },
+  "required": [
+    "schema",
+    "source_id",
+    "data_class",
+    "freshness_requirement_seconds",
+    "integrity_level",
+    "availability_class",
+    "trust_domain",
+    "signature"
+  ],
+  "additionalProperties": false
+}

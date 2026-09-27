@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cara.example/spec/aepg/v0.3/schemas/constraint-proof.schema.json",
+  "title": "ConstraintProof",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "cara.constraint-proof/v0.3"
+    },
+    "proof_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "child_grant_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "parent_grant_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "comparator_id": {
+      "type": "string"
+    },
+    "comparator_version": {
+      "type": "string"
+    },
+    "results": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "constraint",
+          "relation"
+        ],
+        "properties": {
+          "constraint": {
+            "type": "string"
+          },
+          "relation": {
+            "$ref": "common.schema.json#/$defs/constraintRelation"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "proof_hash": {
+      "$ref": "common.schema.json#/$defs/hash"
+    },
+    "evaluated_at": {
+      "$ref": "common.schema.json#/$defs/timestamp"
+    },
+    "signature": {
+      "$ref": "common.schema.json#/$defs/signature"
+    }
+  },
+  "required": [
+    "schema",
+    "proof_id",
+    "child_grant_id",
+    "parent_grant_id",
+    "comparator_id",
+    "comparator_version",
+    "results",
+    "proof_hash",
+    "evaluated_at",
+    "signature"
+  ],
+  "additionalProperties": false
+}

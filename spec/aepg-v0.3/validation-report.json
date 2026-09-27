@@ -1,0 +1,111 @@
+{
+  "version": "0.3",
+  "schema_count": 25,
+  "all_meta_schemas_valid": true,
+  "schemas": [
+    {
+      "schema": "activity.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "actuator.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "agent.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "artifact.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "authority-basis.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "authority-grant.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "authorization-decision.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "authorization-receipt.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "authorization-request.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "common.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "composition-state.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "constraint-proof.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "edge.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "evaluation-context.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "execution-acknowledgment.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "execution-event.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "policy-information-source.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "policy.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "principal.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "recovery.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "resource.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "revocation.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "risk-signal.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "root-authority.schema.json",
+      "valid": true
+    },
+    {
+      "schema": "tool.schema.json",
+      "valid": true
+    }
+  ],
+  "implementation_evidence": {
+    "artifact": "AEPG Reference Implementation v0.2",
+    "tests_passed": 74
+  }
+}

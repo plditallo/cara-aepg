@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cara.example/spec/aepg/v0.3/schemas/activity.schema.json",
+  "title": "Activity",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "cara.activity/v0.3"
+    },
+    "activity_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "actor_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "tier": {
+      "$ref": "common.schema.json#/$defs/tier"
+    },
+    "operation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "provenance_root_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      },
+      "uniqueItems": true
+    },
+    "authority_basis_id": {
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "started_at": {
+      "$ref": "common.schema.json#/$defs/timestamp"
+    },
+    "ended_at": {
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/$defs/timestamp"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "canonical_action_hash": {
+      "$ref": "common.schema.json#/$defs/hash"
+    }
+  },
+  "required": [
+    "schema",
+    "activity_id",
+    "actor_id",
+    "tier",
+    "operation",
+    "provenance_root_ids",
+    "authority_basis_id",
+    "started_at",
+    "ended_at",
+    "canonical_action_hash"
+  ],
+  "additionalProperties": false
+}

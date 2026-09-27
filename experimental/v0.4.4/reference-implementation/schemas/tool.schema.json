@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cara.example/spec/aepg/v0.2/schemas/tool.schema.json",
+  "title": "Tool",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "cara.tool/v0.2"
+    },
+    "tool_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "tool_type": {
+      "type": "string"
+    },
+    "trust_domain": {
+      "type": "string"
+    },
+    "protected_by_pep_id": {
+      "$ref": "common.schema.json#/$defs/id"
+    }
+  },
+  "required": [
+    "schema",
+    "tool_id",
+    "tool_type",
+    "trust_domain",
+    "protected_by_pep_id"
+  ],
+  "additionalProperties": false
+}
