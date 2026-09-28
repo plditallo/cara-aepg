@@ -67,7 +67,7 @@ Use the citation file in this repository (GitHub shows a "Cite this repository" 
 
 ## Disclosure
 
-The code, analysis, and documentation were produced with substantial assistance from AI systems. The author directed the research and is responsible for all claims.
+The code, analysis, and documentation were produced with assistance from AI systems. The author directed the research and development and is responsible for all claims.
 
 ## License
 
