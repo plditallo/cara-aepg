@@ -1,0 +1,8 @@
+# Store text files with LF line endings on every operating system
+* text=auto eol=lf
+
+# Binary files: never convert
+*.docx binary
+*.png  binary
+*.zip  binary
+*.pdf  binary
