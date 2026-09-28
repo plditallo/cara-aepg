@@ -10,7 +10,9 @@ version: "0.4.4"
 date-released: "2026-09-27"
 repository-code: "https://github.com/OWNER/cara-aepg"
 # doi: "10.5281/zenodo.XXXXXXX"
-# license: "Apache-2.0"
+license:
+  - Apache-2.0
+  - CC-BY-4.0
 keywords:
   - agent authorization
   - delegation

@@ -71,4 +71,5 @@ The code, analysis, and documentation were produced with substantial assistance 
 
 ## License
 
-[To be added: code license and documentation license]
+Code (`.py` files and test suites) is licensed under the Apache License 2.0; see [LICENSE](LICENSE) and [NOTICE](NOTICE).
+Specifications, schemas, registries, data files, and documentation are licensed under CC BY 4.0; see [LICENSE-docs](LICENSE-docs).
